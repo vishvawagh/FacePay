@@ -1,0 +1,161 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up - FacePay</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/favicon.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer type="module" src="/src/signup.js"></script>
+    <script defer type="text/javascript" src="./signup-voice.js"></script>
+</head>
+<body>
+    <header id="header">
+        <a class="logo" id="logo"><img class="logo-img" src="../images/logo.png" alt="logo"></a>
+        <script>const clickLogoImg = () => window.location.href = '../index.html'</script>
+        <div class="language-switch" style="text-align: right; margin-right: 20px;">
+            <label class="switch">
+                <input type="checkbox" id="languageSwitch">
+                <span class="slider round"></span>
+            </label>
+            <span id="languageLabel">English</span>
+        </div>
+       
+    </header>
+
+    <main>
+        <div class="section-container">
+            <div class="imgBx">
+                <img src="../images/signupM.jpeg" alt="Signup Image">
+            </div>
+
+            <div class="mb-5">
+                <h3 id="welcomeText" class="mb-3">Welcome to FacePay!</h3>
+                <input type="text" placeholder="Full Name" id="nameInp" class="form-control mb-3 topper">
+                <input type="text" placeholder="Username" id="emailInp" class="form-control mb-3">
+                <input type="text" placeholder="Phone Number" id="phoneInp" class="form-control mb-3">
+                
+                <!-- Add an image upload input
+                <input type="file" id="profileImgInp" accept="image/*" class="form-control mb-3">
+                
+                <button type="button" id="sub_btn" class="btn w-100 btn-outline-primary mb-3">Register</button>
+                <button type="button" id="voice-interaction-btn" class="btn w-100 btn-outline-primary mb-3">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button type="button" id="back_btn" class="btn w-100 mb-3">Back</button>
+                
+                <div class="ask-account">
+                    <p id="p">Already have an account!</p>
+                    <a href="./index.html" class="ask-account-link" id="signupLink">Log In</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up - FacePay</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/favicon.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer type="module" src="/src/signup.js"></script>
+    <script defer type="text/javascript" src="./signup-voice.js"></script>
+    
+</head>
+<body>
+    <header id="header">
+        <a class="logo" id="logo"><img class="logo-img" src="../images/logo.png" alt="logo"></a>
+        <script>const clickLogoImg = () => window.location.href = '../index.html'</script>
+        <div class="language-switch" style="text-align: right; margin-right: 20px; position: relative;">
+            <label class="switch">
+                <input type="checkbox" id="languageSwitch">
+                <span class="slider round"></span>
+            </label>
+            <span id="languageLabel">English</span>
+            
+            <!-- Toast message div -->
+            <div id="toastMessage" class="toast-message">
+                You can translate in English or Marathi.<br>
+                आपण इंग्रजी किंवा मराठीत अनुवादित करू शकता.
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="section-container">
+            <div class="imgBx">
+                <img src="../images/signupM.jpeg" alt="Signup Image">
+            </div>
+
+            <div class="mb-5">
+                <h3 id="welcomeText" class="mb-3">Welcome to FacePay!</h3>
+                <input type="text" placeholder="Full Name" id="nameInp" class="form-control mb-3 topper">
+                <input type="text" placeholder="Aadhaar No" id="emailInp" class="form-control mb-3">
+                <input type="text" placeholder="Phone Number" id="phoneInp" class="form-control mb-3">
+                
+                <!-- Add an image upload input -->
+                <input type="file" id="profileImgInp" accept="image/*" class="form-control mb-3">
+                
+                <button type="button" id="sub_btn" class="btn w-100 btn-outline-primary mb-3">Register</button>
+                <button type="button" id="voice-interaction-btn" class="btn w-100 btn-outline-primary mb-3">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button type="button" id="back_btn" class="btn w-100 mb-3">Back</button>
+                
+                <div class="ask-account">
+                    <p id="p">Already have an account!</p>
+                    <a href="../index.html" class="ask-account-link" id="signupLink">Log In</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to show the toast message
+        function showToastMessage() {
+            const toast = document.getElementById('toastMessage');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000); // Duration of the toast in milliseconds
+        }
+
+        // Call the showToastMessage function on page load
+        window.onload = showToastMessage;
+
+        // Add an event listener for the language switch
+        document.getElementById('languageSwitch').addEventListener('change', function() {
+            const isChecked = this.checked;
+            const message = isChecked 
+                ? "You have switched to Marathi. तुम्ही मराठीत अनुवादित केले आहे."
+                : "You have switched to English. तुम्ही इंग्रजीत अनुवादित केले आहे.";
+
+            // Update the language label
+            document.getElementById('languageLabel').textContent = isChecked ? "Marathi" : "English";
+
+            // Optionally show a toast message for language switch
+            showToastMessage();
+        });
+    </script>
+</body>
+</html>

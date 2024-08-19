@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Digital Payment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            /* Light gray background for the entire page */
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            /* White background for content area */
+        }
+
+        .toggle-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+
+        .about-content {
+            display: none;
+            background-color: #ffffff;
+            /* White background for the About Us section */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        h3,
+        h4 {
+            color: #007BFF;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .video-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content p {
+            line-height: 1.6;
+        }
+
+        .slogan {
+            background: linear-gradient(135deg, #00C9FF, #92FE9D);
+            color: #fff;
+            padding: 15px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: inline-block;
+        }
+
+        .slogan::before,
+        .slogan::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .slogan::before {
+            left: 10px;
+            background: url('https://image.flaticon.com/icons/png/512/2921/2921222.png') no-repeat center center / contain;
+        }
+
+        .slogan::after {
+            right: 10px;
+            background: url('https://image.flaticon.com/icons/png/512/3002/3002616.png') no-repeat center center / contain;
+        }
+
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section:nth-of-type(odd) {
+            background-color: #f9f9f9;
+            /* Light gray background for odd sections */
+        }
+
+        .section:nth-of-type(even) {
+            background-color: #ffffff;
+            /* White background for even sections */
+        }
+
+        button#back_btn {
+            width: 20%;
+            background: #ff0000;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 30px;
+            font-family: "Montserrat", sans-serif;
+            border: none;
+            padding: 8px 0;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+            margin-bottom: 20px;
+            margin-left: 40%;
+        }
+
+        button#back_btn:hover {
+            background: #e30b0b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+            <!-- Slogan Section -->
+            <div class="slogan">
+                Smile to Pay, Simplify Your Day 💵😊
+            </div>
+
+            <!-- About Us Section -->
+            <div class="section">
+                <h2>About Us</h2>
+                <p>We are a dedicated team of innovators committed to making financial technology accessible to all,
+                    particularly to underserved and underprivileged communities. Our mission is to develop solutions
+                    that make digital transactions secure, easy, and inclusive, especially for those who face challenges
+                    in accessing traditional banking services.</p>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="section">
+                <h3>Our Vision:</h3>
+                <p>We envision a future where digital payments are within everyone's reach, regardless of their
+                    location, economic status, or technical knowledge. By leveraging advanced technologies like facial
+                    recognition, voice commands, and regional language support, we aim to simplify transactions and make
+                    digital payments a part of everyday life for everyone.</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="section">
+                <h3>Our Approach:</h3>
+                <p>Understanding the unique needs of underprivileged communities drives our approach. We have designed a
+                    web application that allows shopkeepers to authenticate themselves using normal face recognition and
+                    facilitates customer transactions through smile face authentication. For added convenience,
+                    customers can check their balance using normal face scanning directly from the homepage.</p>
+                <p>To ensure accessibility, our platform includes a toggle button on every page that allows users to
+                    switch the interface language, currently offering Marathi. This ensures that users can navigate the
+                    system with ease, in a language they understand.</p>
+            </div>
+             <!-- Video Section -->
+             <div class="video-section">
+                <video controls>
+                    <source src="../images/Recording facepay.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Key Features Section -->
+            <div class="section">
+                <h3>Key Features and Workflow:</h3>
+                <h4>Shopkeeper Registration and Login:</h4>
+                <ul>
+                    <li><strong>Registration Process:</strong> Shopkeepers begin by accessing the sign-up page, where
+                        they provide their name, mobile number, and upload a photo. After successful registration, the
+                        shopkeeper can log in to the system using facial recognition. If the camera fails to capture a
+                        clear image, a PIN-based authentication is provided as a backup.</li>
+                    <li><strong>Voice Command Functionality:</strong> Recognizing that many users in rural areas may
+                        struggle with typing or navigating digital interfaces, our system offers voice command
+                        interactions. Shopkeepers can provide required information through voice input, making the
+                        process more accessible.</li>
+                </ul>
+            </div>
+
+            <!-- Home Page Interaction Section -->
+            <div class="section">
+                <h4>Home Page and Customer Interaction:</h4>
+                <ul>
+                    <li><strong>Shopkeeper Dashboard:</strong> After logging in, the shopkeeper is directed to their
+                        home page, which displays their profile details, including balance and transaction history. The
+                        dashboard also includes an option for Customer Sign-Up, where customers can register by
+                        providing their name, mobile number, and photo.</li>
+                    <li><strong>Customer Transaction Process:</strong> For transactions, the customer’s number is
+                        entered, followed by a smiling face scan to authorize the payment. The system ensures that
+                        transactions are only successful after this dual-layer authentication.</li>
+                    <li><strong>Balance Check:</strong> Customers can also check their balance on the homepage using
+                        normal face authentication, making it easy for them to manage their funds and also check the
+                        history.</li>
+                </ul>
+            </div>
+
+            <!-- User Interface and Accessibility Section -->
+            <div class="section">
+                <h4>User Interface and Accessibility:</h4>
+                <ul>
+                    <li><strong>Regional Language Support:</strong> A toggle button is provided on every page to switch
+                        the interface language to Marathi, catering to users who are more comfortable with regional
+                        languages.</li>
+                    <li><strong>User-Friendly Design:</strong> The application is designed with simple icons and an
+                        intuitive layout, ensuring that it is easy to navigate for users with varying levels of digital
+                        literacy.</li>
+                </ul>
+            </div>
+
+            <!-- Why We Do What We Do Section -->
+            <div class="section">
+                <h3>Why We Do/What We Do:</h3>
+                <p>We recognize the challenges many people face when making small transactions, especially those under
+                    100 rupees. Our solution is tailored to address this need, providing a simple and secure way for
+                    users to conduct low-value transactions without the complexity often associated with digital
+                    payments. We believe that even the smallest transactions should be made with ease and security.</p>
+            </div>
+
+            <!-- Join Us Section -->
+            <div class="section">
+                <h3>Join Us on Our Journey:</h3>
+                <p>As we continue to refine our digital payment system, we remain committed to our core goal: financial
+                    inclusion for all. We invite you to join us in creating a future where digital transactions are
+                    accessible, secure, and tailored to meet the needs of every community.</p>
+            </div>
+
+           
+        </div>
+    </div>
+    <button type="button" id="back_btn" class="btn w-100 btn-outline-primary mb-3">Back</button>
+
+
+
+
+</body>
+<script>document.getElementById("back_btn").addEventListener("click", function () {
+        window.location.href = '../index.html';
+    });
+</script>
+
+</html>

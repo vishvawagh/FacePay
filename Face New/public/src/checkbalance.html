@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - FacePay</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/favicon.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./checkbalance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer type="module" src="./checkbalance.js"></script>
+    <script defer type="text/javascript" src="/src/checkbalancevoice.js"></script>
+</head>
+
+<body>
+    <header id="header" class="d-flex justify-content-between align-items-center p-3">
+        <a class="logo" id="logo"><img class="logo-img" src="../images/logo.png" alt="logo"
+                onclick="clickLogoImg()"></a>
+        <script>const clickLogoImg = () => window.location.href = '../index.html'</script>
+        <div class="language-switch">
+            <label class="switch">
+                <input type="checkbox" id="languageSwitch">
+                <span class="slider round"></span>
+            </label>
+            <span id="languageLabel">English</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row section-container">
+            <div class="col-md-6 imgBx">
+                <img src="../images/money.gif" class="img-fluid">
+            </div>
+            <div class="col-md-6 mb-5">
+                <h3 class="mb-3" id="welcomeText">Check Balance</h3>
+                <input type="text" placeholder="Mobile Number" id="mobileInp" class="form-control mb-3 topper">
+
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1" id="keepLoggedInLabel">Keep me Logged
+                        In</label>
+                </div>
+                <!-- Face Login Button -->
+                <button type="text" id="submitBtn" class="btn w-100 btn-outline-primary mb-3">
+                    <i class="fas fa-camera"></i> <!-- Face Login Symbol -->
+                </button>
+
+                <input type="password" placeholder="PIN" id="pinInp" class="form-control mb-3 topper">
+
+                <!-- PIN Login Button -->
+                <button type="text" id="submitPIN" class="btn w-100 btn-outline-primary mb-3">
+                    <i class="fas fa-key"></i> <!-- PIN Login Symbol -->
+                </button>
+
+                <!-- Voice Interaction Button -->
+                <button type="button" id="voice-interaction-btn" class="btn w-100 btn-outline-primary mb-3">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button type="button" id="back_btn" class="btn w-100 btn-outline-primary mb-3"><i class="fa fa-arrow-circle-left"></i>
+                </button>
+
+                
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

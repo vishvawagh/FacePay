@@ -1,0 +1,142 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500&display=swap');
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #2f3337;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    padding: 1% 5% 1% 5%;
+    background-color: white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo-img {
+    width: auto;
+    height: 50px;
+}
+
+/* Language switch */
+.language-switch {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#languageLabel {
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/* Main content */
+.container {
+    width: 80%;
+    margin: 4% auto;
+    background-color: white;
+    box-shadow: 0px 3px 8px #002447;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #0073cf;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #0073cf;
+    padding-bottom: 10px;
+    text-align: center;  /* Center the heading */
+}
+
+.user-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Buttons */
+button#back_btn {
+    width: 50%;
+    background: #ff0000;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    padding: 8px 0;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+button#back_btn:hover {
+    background: #e30b0b;
+}

@@ -1,0 +1,488 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.unhide {
+  display: block;
+}
+
+/* header section starts */
+
+.floating-message {
+  position: fixed;
+  top: 10px;
+  right: 140px;
+
+  background-color: #a6cff0;
+  color: #1a1415;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out, fadeOut 1s ease-in-out 4s forwards;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slideDown {
+  0% {
+      top: -50px;
+  }
+  100% {
+      top: 10px;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+/* Toggle Switch Container */
+.language-switch {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* Label for Language (English/Marathi) */
+.language-switch #languageLabel {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* The round slider thumb */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+}
+
+/* Checkbox checked styles */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 10%;
+  background-color: white;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.logo-img {
+  width: auto;
+  height: 50px;
+}
+
+#customersignup {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #002447;
+  text-decoration: none;
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease 0s;
+}
+
+#customersignup:hover {
+  color: #0073cf;
+}
+#signup {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #002447;
+  text-decoration: none;
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease 0s;
+}
+
+#signup:hover {
+  color: #0073cf;
+}
+
+#login {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 9px 25px;
+  background-color: #0073cf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+#login:hover {
+  background-color: #002447;
+}
+
+
+/* header section ends */
+
+/* main section starts */
+
+.main-container {
+  margin: 0% 10%;
+}
+
+.welcome-container {
+  padding: 1% 5% 1% 5%;
+  background-color: white;
+}
+
+.welcome-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0073cf;
+  text-decoration: none;
+  text-align: center;
+}
+
+.welcome-text0 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #0073cf;
+  text-decoration: none;
+  text-align: center;
+}
+
+.transaction-type-container {
+  padding: 1% 10% 1% 10%;
+  background-color: white;
+}
+
+.transaction-type {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.transaction-type span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #002447;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.transaction-type span:hover {
+  background-color: #ffc439;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.transaction-container {
+  width: auto;
+  padding: 1% 3%;
+  background-color: #002447;
+  border-radius: 20px;
+}
+
+#wallet-transfer-container {
+  display: flex;
+}
+
+#bank-transfer-container {
+  display: flex;
+}
+
+.transfer-type {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+.transfer-type:Before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#bank-transfer-container .transfer-type {
+  margin: 0 0 0 1.25%;
+}
+
+.transfer-title {
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin: 0 2.5%;
+  padding: 1% 0 1% 0; 
+}
+
+#bank-transfer-container .transfer-title {
+  margin: 0 2.5%;
+  text-align: end;
+}
+
+.transfer-detail {
+  background: white;
+  margin: 0 2.5% 0 0;
+  border-radius: 20px;
+}
+
+#bank-transfer-container .transfer-detail {
+  margin: 0;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+  color: grey;
+}
+
+.wallet-form {  
+  padding: 10px 15px;
+}
+
+.last-form-input-wallet {
+  padding: 10px 15px 20px 15px;
+}
+
+.bank-form {
+  padding: 10px 15px 0 15px;
+}
+
+.last-form-input-bank {
+  padding: 10px 15px;
+}
+
+.box-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #0073cf;
+  padding: 0 0 5px 10px;
+}
+
+.box-input {
+  font-size: 14px;
+  color: grey;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.imgBx {
+  width: 50%;
+  margin: 0 0 0 1.25%;
+}
+
+.imgBx img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#bank-transfer-container .imgBx {
+  margin: 0 1.25% 0 0;
+}
+#profile {
+  cursor: pointer;
+  text-align: center;
+  margin: 0px 10px;
+}
+
+.profile-logo {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* main section ends */
+
+/* footer section starts */
+/* Toggle Switch Container */
+.language-switch {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* Label for Language (English/Marathi) */
+.language-switch #languageLabel {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mic Icon */
+#mic-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* The round slider thumb */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+/* Checkbox checked styles */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.submit-container {
+  margin: 1% 10%;
+  padding: 1% 5% 1% 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: #ffc439;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #002447;
+  border: none;
+  text-decoration: none;
+  border-radius: 25px;
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background-color: #fba81c;
+}
+
+
+/* footer section ends */
